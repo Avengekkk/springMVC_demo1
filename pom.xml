@@ -6,7 +6,12 @@
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>demo1 Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <url>https://maven.apache.org</url>
+
+
+
+
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,6 +19,50 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+
+    <!--<dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>-->
+
+    <!--上面这个已经不在适合Tomcat10以上的版本了,只能用下面这个 -->
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <version>5.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+
+
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>6.0.9</version>
+    </dependency>
+
+
+    <!--这个坐标是转换类和json用的,不是专业的json坐标 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.67_noneautotype2</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.12.7.1</version>
+    </dependency>
+
+
+
+
   </dependencies>
   <build>
     <finalName>demo1</finalName>
